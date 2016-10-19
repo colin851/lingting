@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>访问人数：<span id="txt_visitor"></span></p>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript">
+		$(function() {		
+			$.ajax({
+				type: "GET",
+				url: "/tongji.ashx?action=get_tongji",
+				data: {},
+				dataType: "json",
+				success: function(data) {
+					$("#txt_visitor").html(data.visit_count);
+				},
+				error: function(data, textStatus, errorThrown) {
+
+				}
+
+			});
+		})
+	</script>
+
+</html>

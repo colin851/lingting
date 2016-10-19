@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<link rel="stylesheet" href="css/h5.css" />
+		<title></title>
+		<!--<script>
+			if("wView" in window) {
+				window.wView.allowsInlineMediaPlayback = "YES";
+				window.wView.mediaPlaybackRequiresUserAction = "NO";
+				self.wView.allowsInlineMediaPlayback = YES;
+				self.wView.mediaPlaybackRequiresUserAction = NO;
+			}
+		</script>-->
+	</head>
+
+	<body>
+		<div class="arrowDown animated"></div>
+		<div id="fullPage">
+			<div class="section section1">
+				<img class="gif" src="img/h5/P1.gif">
+				<div class="slogan"><img src="img/h5/slogan.png"></div>
+			</div>
+			<div class="section section2">
+				<img class="se2-img se2-1 animated fadeIn shaked-1" src="img/h5/se2-1.png" />
+				<img class="se2-img se2-2 animated fadeIn shaked-2" src="img/h5/se2-2.png" />
+				<img class="se2-img se2-3 animated fadeIn shaked-3" src="img/h5/se2-3.png" />
+				<img class="se2-img se2-4 animated fadeIn shaked-4" src="img/h5/se2-4.png" />
+				<img class="se2-img se2-5 animated fadeIn shaked-5" src="img/h5/se2-5.png" />
+				<img class="se2-img se2-6 animated fadeIn shaked-6" src="img/h5/se2-6.png" />
+				<div class="se2-txt animated delay3"></div>
+				<div class="txt animated delay3">
+					<p class="txt_1 ">繁冗的工作日常</p>
+					<p class="txt_2 ">外界的武断界定</p>
+					<p class="txt_3 ">容易让人迷失自我</p>
+					<p class="txt_4 ">走出对与错的观念</p>
+					<p class="txt_5 ">诚恳地，和过去的自己对话</p>
+					<p class="txt_5 ">享受人生的丰富、芜杂</p>
+				</div>
+
+			</div>
+			<div class="section section3">
+				<img class="se3-img se3-1 animated fadeIn shaked-6" src="img/h5/se3-1.jpg" />
+				<img class="se3-img se3-2 animated fadeIn shaked-1" src="img/h5/se3-2.png" />
+				<img class="se3-img se3-3 animated fadeIn shaked-2" src="img/h5/se3-3.png" />
+				<img class="se3-img se3-4 animated fadeIn shaked-3" src="img/h5/se3-4.png" />
+				<img class="se3-img se3-5 animated fadeIn shaked-4" src="img/h5/se3-5.png" />
+				<img class="se3-img se3-6 animated fadeIn shaked-5" src="img/h5/se3-6.png" />
+				<div class="se3-txt animated  delay3"></div>
+				<div class="txt animated delay3">
+					<p class="txt_1 ">放下沉闷的标签</p>
+					<p class="txt_2 ">怀着勇敢和笃定前行</p>
+					<p class="txt_3 ">会有一个地方</p>
+					<p class="txt_4 ">那个未知的你</p>
+					<p class="txt_5 ">将带着迷人的微笑</p>
+					<p class="txt_6 ">与你相遇</p>
+				</div>
+			</div>
+			<div class="section section4">
+				<img class="left" src="img/h5/se4-1.jpg" />
+				<img class="right" src="img/h5/se4-2.jpg" />
+				<div class="se4-txt animated "></div>
+				<div class="txt-step">
+					<p class="txt_1  "><span class="typing">不同年代的着装元素</span></p>
+					<p class="txt_2  "><span class="typing">浸润着2017S/S的设计</span></p>
+					<p class="txt_3  "><span class="typing">她带着不同时空或深 / 或浅的印记</span></p>
+					<p class="txt_5  "><span class="typing">复古与科技感混合交融</span></p>
+					<p class="txt_6  "><span class="typing">透着多层次的动人质感</span></p>
+				</div>
+			</div>
+			<div class="section section5">
+				<div class="scale">
+					<img class="head animated fadeIn" src="img/h5/se5-1.png" />
+					<img class="se5-4 animated fadeIn" src="img/h5/se5-4.png" />
+					<img class="se5-5 animated fadeIn" src="img/h5/se5-5.png" />
+					<img class="se5-6 animated fadeIn" src="img/h5/se5-6.png" />
+					<img class="se5-7 animated fadeIn" src="img/h5/se5-8.png" />
+					<img class="se5-8 animated fadeIn" src="img/h5/se5-9.png" />
+					<div class="btn-group animated fadeIn">
+						<a href="meeting.html"><img src="img/h5/btn1.png"></a>
+						<a href="phoneList.html"><img src="img/h5/btn2.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<audio id="audio" src="ad.mp3"></audio>
+		<audio id="audio-2" src="bgm.mp3" loop="loop"></audio>
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script>
+			wx.config({
+				// 配置信息, 即使不正确也能使用 wx.ready
+				debug: false,
+				appId: '',
+				timestamp: 1,
+				nonceStr: '',
+				signature: '',
+				jsApiList: []
+			});
+			//				wx.ready(function() {
+			//					
+			//				});
+			function onBridgeReady() {
+				WeixinJSBridge.call('hideOptionMenu');
+			}
+
+			if(typeof WeixinJSBridge == "undefined") {
+				if(document.addEventListener) {
+					document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+				} else if(document.attachEvent) {
+					document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+					document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+				}
+			} else {
+				onBridgeReady();
+			}
+
+			(function() {
+				$.fn.imgLoad = function(options) {
+					var opts = $.extend({
+						time: 4000, ///等待载入时间，如果超过这个时间就直接执行回调  
+						callback: function() {} //默认回调  
+					}, options);
+					var $this = this,
+						i = 0,
+						j = 0,
+						len = this.length;
+					$this.each(function() {
+						var _this = this,
+							dateSrc = $(_this).attr("date-src"),
+							imgsrc = dateSrc ? dateSrc : _this.src;
+						var img = new Image();
+						img.onload = function() {
+							img.onload = null;
+							_this.src = imgsrc;
+							i++;
+						};
+						img.src = imgsrc;
+					});
+					var t = window.setInterval(function() {
+						j++;
+						$("#msg").html(i);
+						if(i == len || j * 200 >= opts.time) {
+							window.clearInterval(t);
+							opts.callback();
+						};
+					}, 200);
+				}
+			})(jQuery);
+			$('.gif').imgLoad({
+				time: 10000,
+				callback: function() {
+					setTimeout(function() {
+						document.getElementById('audio').play();
+					}, 1000)
+
+					//					window.ar = setTimeout(function() {
+					//						$('.arrowDown').addClass('bounceIn');
+					//					}, 10000);
+				}
+			});
+
+			function reset() {
+				var width = $(window).width();
+				var height = $(window).height();
+				var scale = 1;
+				var vScale = width / 375;
+				var hScale = height / 667;
+				scale = vScale < hScale ? vScale : hScale;
+				if(scale > 2) scale = 2;
+				$(".scale").css({
+					"zoom": scale
+				});
+			};
+			reset();
+			$('#fullPage').fullpage({
+				verticalCenter: false,
+				menu: true,
+				afterLoad: function(link, index) {
+					switch(index) {
+						case 1:
+							document.getElementById('audio-2').pause();
+							//$('.gif').attr('src', 'img/h5/P1.gif');
+							$('.gif').imgLoad({
+								time: 10000,
+								callback: function() {
+									setTimeout(function() {
+										document.getElementById('audio').play();
+									}, 1000)
+									window.ar = setTimeout(function() {
+										$('.slogan').fadeIn('2s');
+										$('.arrowDown').addClass('bounceIn delay2');
+									}, 11000);
+								}
+							});
+							break;
+						case 2:
+							//$.fn.fullpage.setAllowScrolling(false);
+							document.getElementById('audio-2').play();
+							$('.section2').addClass('show');
+							$('.se2-6').on('webkitAnimationEnd', function() {
+								$('.section2').addClass('shake-little');
+								$('.section2 .se2-txt').addClass('fadeIn');
+								$('.section2 .txt').addClass('fadeIn');
+								$('.arrowDown').addClass('bounceIn delay5');
+
+							});
+							$('.se2-6').on('animationend', function() {
+								$('.section2').addClass('shake-little');
+								$('.section2 .se2-txt').addClass('fadeIn');
+								$('.section2 .txt').addClass('fadeIn');
+								$('.arrowDown').addClass('bounceIn delay5');
+									//$.fn.fullpage.setAllowScrolling(true);
+							});
+
+							break;
+						case 3:
+							//$.fn.fullpage.setAllowScrolling(false);
+							$('.section3').addClass('show');
+							$('.se3-6').on('webkitAnimationEnd', function() {
+								$('.section3').addClass('shake-little');
+								$('.section3 .se3-txt').addClass('fadeIn');
+								$('.section3 .txt').addClass('fadeIn');
+								$('.arrowDown').addClass('bounceIn delay5');
+									//$.fn.fullpage.setAllowScrolling(true);
+							});
+							$('.se3-6').on('animationend', function() {
+								$('.section3').addClass('shake-little');
+								$('.section3 .se3-txt').addClass('fadeIn');
+								$('.section3 .txt').addClass('fadeIn');
+								$('.arrowDown').addClass('bounceIn delay5');
+									//$.fn.fullpage.setAllowScrolling(true);
+							});
+							break;
+
+						case 4:
+							//$.fn.fullpage.setAllowScrolling(false);
+							$('.left').addClass('show-scale');
+							setTimeout(function() {
+								$('.section4 .se4-txt').fadeIn('1s');
+								$('.txt-step').addClass('show-typing');
+							}, 500);
+							$('.section4 .txt_6').on('webkitAnimationEnd', function() {
+								$('.arrowDown').addClass('bounceIn');
+								//$.fn.fullpage.setAllowScrolling(true);
+							});
+							$('.section4 .txt_6').on('animationend', function() {
+								//$.fn.fullpage.setAllowScrolling(true);
+								$('.arrowDown').addClass('bounceIn');
+							});
+							break;
+						case 5:
+							$('.section5').addClass('show-text show');
+							//$.fn.fullpage.setAllowScrolling(true);
+							$('.arrowDown').removeClass('bounceIn');
+							break;
+					}
+
+				},
+				onLeave: function(link, index, direction) {
+					switch(link) {
+						case 1:
+							$('.arrowDown').removeClass('bounceIn delay2');
+							clearTimeout(ar);
+							setTimeout(function() {
+								document.getElementById('audio').pause();
+								$('.slogan').fadeOut();
+								//$('.gif').attr('src', '');
+							}, 500)
+							break;
+						case 2:
+							$('.arrowDown').removeClass('bounceIn delay5');
+							setTimeout(function() {
+								$('.section2').removeClass('show shake-little');
+								$('.section2 .se2-txt').removeClass('fadeIn');
+								$('.section2 .txt').removeClass('fadeIn');
+							}, 500);
+							break;
+						case 3:
+							$('.arrowDown').removeClass('bounceIn delay5');
+							setTimeout(function() {
+								$('.section3').removeClass('show shake-little');
+								$('.section3 .se3-txt').removeClass('fadeIn');
+								$('.section3 .txt').removeClass('fadeIn');
+							}, 500);
+							break;
+						case 4:
+							$('.arrowDown').removeClass('bounceIn');
+							setTimeout(function() {
+								$('.left').removeClass('show-scale');
+								$('.section4 .se4-txt').fadeOut();
+								$('.txt-step').removeClass('show-typing');
+							}, 500);
+							break;
+						case 5:
+							$('.arrowDown').removeClass('bounceIn');
+							setTimeout(function() {
+								$('.section5').removeClass('show-text show');
+							}, 500)
+							break;
+					}
+
+				}
+			});
+			//$.fn.fullpage.setAllowScrolling(false);
+		</script>
+	</body>
+
+</html>

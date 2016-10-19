@@ -1,0 +1,208 @@
+﻿@charset "utf-8";
+/* CSS Document */
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0;
+    font-size:1em; font-family: "方正黑体简体","微软雅黑" ,sans-serif;  }
+
+td,th,caption { font-size:1em; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var ,i{ font-style:normal; font-weight:normal;}
+
+img { border:none;display:block;max-width: 100%; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button, option { font-size:14px;outline:none; }
+textarea{ resize:none;}
+table { border-collapse:collapse; }
+input{
+	-webkit-appearance:none;	
+	-moz-appearance: none;
+	border-radius: 0;
+}
+
+.hover-gray{
+	background: #e5e5e5!important;
+}
+.hover-deepRed{
+	background: #ac3d3d!important;
+	color: white!important;
+}
+.hover-red{
+	background: #EF5350!important;
+	color: white!important;
+}
+button{
+	background: #f06767;
+}
+body{
+	margin:0; 
+    padding:0;
+    font-size:1em; 
+    font-family: "方正黑体简体","微软雅黑" ,sans-serif;
+	background-color: #f2f2f2;
+    /*padding-bottom:44px;*/
+}
+a{ text-decoration:none; color:#666; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+/*a:active{
+	background: rgba(255,255,255,0.5);
+}
+input:active{
+	background: rgba(255,255,255,0.5);
+}*/
+a:hover { text-decoration:none; }
+
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -webkit-appearance: none;
+}
+@font-face {font-family: 'iconfont';
+    src:url('../../iconfont/iconfont.ttf?t=v') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    font-style:normal;
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-stroke-width: 0.2px; 
+   -moz-osx-font-smoothing: grayscale;
+
+}
+
+                    
+                    
+body{
+	color: #666;
+	font-size:14px ;
+}
+.clearfix{
+	clear: both;
+}
+.container{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.align-justify{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content:space-between;
+	-webkit-justify-content: space-between;
+	-webkit-box-pack: justify;
+}
+.justify-center{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content:center;
+	-webkit-justify-content: center;
+	-webkit-box-pack: center;
+}
+.flexible{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+}
+.flexible-start{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	-webkit-box-align: start;
+	overflow: auto;
+}
+.col-1{
+	flex: 1;
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+}
+.ellipsis-one{
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.ellipsis-two{
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.ellipsis-three{
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+ .btn-switch {
+	width: 48px;
+	height: 28px;
+	float: right;
+	border: 1px solid #dbdbdb;
+	background-color: white;
+	/*-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;*/
+	-webkit-border-radius: 28px;
+	border-radius: 28px;
+	position: relative;
+	/*border-color:white; */
+	
+	-webkit-transition: all .2s linear;
+}
+.circle-switch {
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: white;
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	top: 0px;
+	transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
+.current .circle-switch{
+	left: 20px;
+}
+.btn-switch.current {
+	-webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    background-color: #4cd964;
+    border: 1px solid #4cd964;
+    -webkit-box-shadow: 0 0 5px rgb(76, 217, 100) inset;
+    box-shadow: 0 0 5px rgb(76, 217, 100) inset;
+  }
+  
+
+.crSpan {
+	border: none;
+	background-size: 100%;
+}
+.crSpan:before {
+	content: "\e6df";
+	color: #ef5350;
+	font-family: iconfont;
+	font-size: 20px;
+}
+
+

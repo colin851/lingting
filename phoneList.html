@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>定货会</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			body {
+				padding-bottom: 51px;
+				padding-top: 44px;
+			}
+			
+			header {
+				position: fixed;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		<title>通讯录</title>
+	</head>
+
+	<body>
+		<header>
+			<a class="back" href="home.html"><img src="img/rarrow.png" /></a>
+			<h1>通讯录</h1>
+		</header>
+		<div class="list-box">
+			<ul>
+				<li class="phone-item">
+					<h5>less  品牌业务中心</h5>
+					<div class="phone-datail flexible">
+						<span>张宇红</span>
+						<p class="col-1">18657191790</p>
+						<a href="tel:18657191790"><img src="img/phone.png" /></a>
+					</div>
+				</li>
+				<li class="phone-item">
+					<h5>定货会总负责</h5>
+					<div class="phone-datail flexible">
+						<span class="spacing">高 兴</span>
+						<p class="col-1">13906505876</p>
+						<a href="tel:13906505876"><img src="img/phone.png" /></a>
+					</div>
+				</li>
+				<li class="phone-item">
+					<h5>会务负责人</h5>
+					<div class="phone-datail flexible">
+						<span>贾 佳</span>
+						<p class="col-1">13758299585</p>
+						<a href="tel:13758299585"><img src="img/phone.png" /></a>
+					</div>
+				</li>
+				<li class="phone-item">
+					<h5>经    销</h5>
+					<div class="phone-datail flexible">
+						<span>许珈源</span>
+						<p class="col-1">15858242448</p>
+						<a href="tel:15858242448"><img src="img/phone.png" /></a>
+					</div>
+					<div class="phone-datail flexible">
+						<span>赵振宇</span>
+						<p class="col-1">15869190648</p>
+						<a href="tel:15869190648"><img src="img/phone.png" /></a>
+					</div>
+				</li>
+				<li class="phone-item">
+					<h5>零售运营中心</h5>
+					<div class="phone-datail flexible">
+						<span>叶相婷</span>
+						<p class="col-1">15869164240</p>
+						<a href="tel:15869164240"><img src="img/phone.png" /></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<ul class="foot flexible">
+				<li class="col-1">
+					<a href="h5.html">
+						<img src="img/zhi-1.png" />
+						<p>17春夏定货会</p>
+					</a>
+				</li>
+				<li class="col-1">
+					<a href="meeting.html">
+						<img src="img/rili-1.png" />
+						<p>会务日程</p>
+					</a>
+				</li>
+				<li class="col-1 activeBar">
+					<a href="phoneList.html">
+						<img src="img/tongxun.png" />
+						<p>会务通讯录</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script>
+			
+			function onBridgeReady() {
+				WeixinJSBridge.call('hideOptionMenu');
+			}
+
+			if(typeof WeixinJSBridge == "undefined") {
+				if(document.addEventListener) {
+					document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+				} else if(document.attachEvent) {
+					document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+					document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+				}
+			} else {
+				onBridgeReady();
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>定货会</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="main-title">
+				<img class="logoText" src="img/logoText.png">
+				<p>17春夏定货会</p>
+			</div>
+			<div class="main-content">
+				<div class="card theme">
+					<div class="card-title">主题内容</div>
+					<a class="card-content" href="h5.html"></a>
+				</div>
+				<div class="card meetting">
+					<div class="card-title">会务日程</div>
+					<a class="card-content" href="meeting.html"></a>
+				</div>
+				<div class="card book">
+					<div class="card-title">会务通讯录</div>
+					<a class="card-content" href="phoneList.html"></a>
+				</div>
+			</div>
+
+			<img class="logo" src="img/logo.png" />
+		</div>
+		<div style="display: none;">
+			<img src="img/addr.png" />
+			<img src="img/rarrow.png" />
+			<img src="img/phone.png" />
+			<img src="img/rili.png" />
+			<img src="img/zhi.png" />
+			<img src="img/tongxun.png" />
+			<img src="img/rili-1.png" />
+			<img src="img/zhi-1.png" />
+			<img src="img/tongxun-1.png" />
+		</div>
+		<script src="js/jquery-2.0.3.min.js"></script>
+		
+		<script>
+			
+		</script>
+		<script>
+		
+			(function() {
+				$.fn.imgLoad = function(options) {
+					var opts = $.extend({
+						time: 4000, ///等待载入时间，如果超过这个时间就直接执行回调  
+						callback: function() {} //默认回调  
+					}, options);
+					var $this = this,
+						i = 0,
+						j = 0,
+						len = this.length;
+					$this.each(function() {
+						var _this = this,
+							dateSrc = $(_this).attr("date-src"),
+							imgsrc = dateSrc ? dateSrc : _this.src;
+						var img = new Image();
+						img.onload = function() {
+							img.onload = null;
+							_this.src = imgsrc;
+							i++;
+						};
+						img.src = imgsrc;
+					});
+					var t = window.setInterval(function() {
+						j++;
+						$("#msg").html(i);
+						if(i == len || j * 200 >= opts.time) {
+							window.clearInterval(t);
+							opts.callback();
+						};
+					}, 200);
+				}
+			})(jQuery);
+			$('.main').addClass('show-main');
+			if(localStorage.getItem('n')) {
+				if(window.Hash == 'flag') {
+					$('.loading-block').addClass('hide-loading');
+					$('.main').addClass('show-main');
+				} else {
+					setTimeout(function() {
+						$('.loading-block').addClass('hide-loading');
+						$('.main').addClass('show-main');
+					}, 10000)
+				}
+
+			} else {
+				$('img').imgLoad({
+					time: 10000,
+					callback: function() {
+						$('.main').addClass('show-main');
+						localStorage.setItem('n', '0');
+					}
+				});
+			}
+
+			var winHeight = $(window).height();
+			if($(window).width() <= 320) {
+				$('.theme').css({
+					'top': winHeight - 300
+				});
+				$('.meetting').css({
+					'top': winHeight - 240
+				});
+				$('.book').css({
+					'top': winHeight - 180
+				});
+			} else {
+				$('.theme').css({
+					'top': winHeight - 320
+				});
+				$('.meetting').css({
+					'top': winHeight - 260
+				});
+				$('.book').css({
+					'top': winHeight - 200
+				});
+			}
+			$('.card-title').on('click', function() {
+				var flg = 0;
+				var index = $(this).index();
+				var far = $(this).parent();
+				var index = far.index();
+				if(far.hasClass('active')) {
+					far.removeClass('active');
+				} else {
+					for(var i = 0; i < 3; i++) {
+						if(i !== index) {
+							if($('.card').eq(i).hasClass('active')) {
+								flg += 1;
+								$('.card').eq(i).removeClass('active');
+								setTimeout(function() {
+									far.addClass('active');
+									$('.card-title').on('click');
+								}, 600)
+								break;
+							}
+						}
+					}
+					if(flg == 0) {
+						far.addClass('active');
+					}
+				}
+			});
+			
+			function onBridgeReady() {
+				WeixinJSBridge.call('hideOptionMenu');
+			}
+
+			if(typeof WeixinJSBridge == "undefined") {
+				if(document.addEventListener) {
+					document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+				} else if(document.attachEvent) {
+					document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+					document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+				}
+			} else {
+				onBridgeReady();
+			}
+		</script>
+	</body>
+
+</html>
